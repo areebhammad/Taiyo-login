@@ -34,11 +34,21 @@ function Navbar() {
             </Link>
 
             <Link
-              href="/api/auth/signin"
+              href="/profile"
               className={`${
                 activeLink === 2 ? "bg-orange-600 text-white" : "text-black"
               } px-4 py-2 text-sm rounded-full font-medium`}
               onClick={() => setActiveLink(2)}
+            >
+              Profile
+            </Link>
+
+            <Link
+              href="/api/auth/signin"
+              className={`${
+                activeLink === 3 ? "bg-orange-600 text-white" : "text-black"
+              } px-4 py-2 text-sm rounded-full font-medium`}
+              onClick={() => setActiveLink(3)}
             >
               Sign In
             </Link>
@@ -46,9 +56,9 @@ function Navbar() {
             <Link
               href="/api/auth/signout"
               className={`${
-                activeLink === 3 ? "bg-orange-600 text-white" : "text-black"
+                activeLink === 4 ? "bg-orange-600 text-white" : "text-black"
               } px-4 py-2 text-sm rounded-full font-medium`}
-              onClick={() => setActiveLink(3)}
+              onClick={() => setActiveLink(4)}
             >
               Sign Out
             </Link>
@@ -114,11 +124,21 @@ function Navbar() {
               </Link>
 
               <Link
-                href="/api/auth/signin"
+                href="/profile"
                 className={`${
                   activeLink === 2 ? "bg-orange-600 text-white" : "text-black"
                 } block px-3 py-2 rounded-full text-base font-medium`}
                 onClick={() => setActiveLink(2)}
+              >
+                Profile
+              </Link>
+
+              <Link
+                href="/api/auth/signin"
+                className={`${
+                  activeLink === 3 ? "bg-orange-600 text-white" : "text-black"
+                } block px-3 py-2 rounded-full text-base font-medium`}
+                onClick={() => setActiveLink(3)}
               >
                 Sign In
               </Link>
@@ -126,9 +146,9 @@ function Navbar() {
               <Link
                 href="/api/auth/signout"
                 className={`${
-                  activeLink === 3 ? "bg-orange-600 text-white" : "text-black"
+                  activeLink === 4 ? "bg-orange-600 text-white" : "text-black"
                 } block px-3 py-2 rounded-full text-base font-medium`}
-                onClick={() => setActiveLink(3)}
+                onClick={() => setActiveLink(4)}
               >
                 Sign Out
               </Link>
