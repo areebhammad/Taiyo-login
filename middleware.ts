@@ -2,4 +2,4 @@
 export { default } from "next-auth/middleware";
 
 //Applies next-auth only to the matching routes - can be regex
-export const config = { matcher: ["/"] };
+// export const config = { matcher: ["/extra"] };

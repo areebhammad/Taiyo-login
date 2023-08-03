@@ -13,7 +13,11 @@ function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Simplified className */}
           <div className="flex-shrink-0">
-            <Link className=" text-orange-600 font-bold" href="/">
+            <Link
+              className=" text-orange-600 font-bold"
+              href="/"
+              onClick={() => setActiveLink(1)}
+            >
               Taiyo.ai
             </Link>
           </div>
@@ -30,19 +34,9 @@ function Navbar() {
             </Link>
 
             <Link
-              href="/extra"
-              className={`${
-                activeLink === 2 ? "bg-orange-600 text-white" : "text-black"
-              } px-4 py-2 text-sm rounded-full font-medium`}
-              onClick={() => setActiveLink(2)}
-            >
-              Extra
-            </Link>
-
-            <Link
               href="/api/auth/signin"
               className={`${
-                activeLink === 3 ? "bg-orange-600 text-white" : "text-black"
+                activeLink === 2 ? "bg-orange-600 text-white" : "text-black"
               } px-4 py-2 text-sm rounded-full font-medium`}
               onClick={() => setActiveLink(2)}
             >
@@ -52,9 +46,9 @@ function Navbar() {
             <Link
               href="/api/auth/signout"
               className={`${
-                activeLink === 4 ? "bg-orange-600 text-white" : "text-black"
+                activeLink === 3 ? "bg-orange-600 text-white" : "text-black"
               } px-4 py-2 text-sm rounded-full font-medium`}
-              onClick={() => setActiveLink(2)}
+              onClick={() => setActiveLink(3)}
             >
               Sign Out
             </Link>
@@ -114,24 +108,17 @@ function Navbar() {
                 className={`${
                   activeLink === 1 ? "bg-orange-600 text-white" : "text-black"
                 } block px-3 py-2 rounded-full text-base font-medium`}
+                onClick={() => setActiveLink(1)}
               >
                 Home
               </Link>
 
               <Link
-                href="/extra"
+                href="/api/auth/signin"
                 className={`${
                   activeLink === 2 ? "bg-orange-600 text-white" : "text-black"
                 } block px-3 py-2 rounded-full text-base font-medium`}
-              >
-                Extra
-              </Link>
-
-              <Link
-                href="/api/auth/signin"
-                className={`${
-                  activeLink === 3 ? "bg-orange-600 text-white" : "text-black"
-                } block px-3 py-2 rounded-full text-base font-medium`}
+                onClick={() => setActiveLink(2)}
               >
                 Sign In
               </Link>
@@ -139,8 +126,9 @@ function Navbar() {
               <Link
                 href="/api/auth/signout"
                 className={`${
-                  activeLink === 4 ? "bg-orange-600 text-white" : "text-black"
+                  activeLink === 3 ? "bg-orange-600 text-white" : "text-black"
                 } block px-3 py-2 rounded-full text-base font-medium`}
+                onClick={() => setActiveLink(3)}
               >
                 Sign Out
               </Link>
